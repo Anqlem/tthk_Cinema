@@ -34,12 +34,31 @@ namespace CinemaSeats
                 Location = new Point(100, 140),
                 Text = "Big"
             };
+            big.Click += Big_Click;
+            medium.Click += Medium_Click;
+            small.Click += Small_Click;
+
             this.Controls.Add(small);
             this.Controls.Add(medium);
             this.Controls.Add(big);
         }
 
+        private void Small_Click(object sender, EventArgs e)
+        {
+            Small sml = new Small();
+            sml.Show();
+        }
 
+        private void Medium_Click(object sender, EventArgs e)
+        {
+            Medium mdm = new Medium();
+            mdm.Show();
+        }
 
+        private void Big_Click(object sender, EventArgs e)
+        {
+            Big bg = new Big();
+            bg.Show();
+        }
     }
 }
